@@ -10,7 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         p { font-family: 'Poppins', sans-serif; }
         .barlow { font-family: 'Barlow Condensed', sans-serif; }
@@ -18,116 +21,284 @@
     </style>
 </head>
 <body>
-    <div>
-        <div class="flex p-10">
-            <h3 class="text-3xl barlow"> Dust Defender Lab </h3>
-            <ol class="text-2xl ml-[700px]">Home</ol>
-            <ol class="text-2xl ml-[30px]">About Us</ol>
-            <ol class="text-2xl ml-[30px]">Contact Us</ol>
-        </div>
-
-        <div>
-            <h2 class="text-3xl mt-[370px] ml-[130px] barlow">
-                FULL SERVICE AND EXCELLENT QUALITY
-            </h2>
-            <div class="flex">   
-                <p class="ml-28 text-9xl barlow">
-                    CAR  
-                </p>
-    
-                <h1 class="text-9xl ml-32 barlow">
-                    DETAILING  
-                </h1>
+    <div class="bg-[#0d0d0f]">
+        <div class="relative w-full h-screen overflow-hidden">
+            <!-- Background Video -->
+            <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline>
+                <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <!-- Content on top of video -->
+            <div class="relative z-10">
+                <div class="flex p-10 text-white items-center">
+                    <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" alt="Dust Defender Lab Logo" class="h-28">
+                    <ol class="text-2xl ml-[700px]">Home</ol>
+                    <ol class="text-2xl ml-[30px]">About Us</ol>
+                    <ol class="text-2xl ml-[30px]">Contact Us</ol>
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl mt-[300px] ml-[130px] barlow text-white ">
+                        FULL SERVICE AND EXCELLENT QUALITY
+                    </h2>
+                    <div class="flex space-x-20 items-center h-screen w-full text-white px-24 ">
+                        <p class="text-[15vw] font-extrabold uppercase barlow leading-none text-center pb-[550px] ">
+                            CAR
+                        </p>
+                        <h1 class="text-[15vw] font-extrabold uppercase barlow leading-none text-center pb-[550px]">
+                            DETAILING
+                        </h1>
+                    </div>
+                    
+                </div>
             </div>
+        
+            <!-- Overlay to Darken Video (Optional) -->
+            <div class="absolute inset-0 bg-black opacity-50"></div>
         </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const video = document.getElementById("backgroundVideo");
+                
+                video.addEventListener("ended", function () {
+                    video.currentTime = 0; // Restart from beginning
+                    video.play(); // Play again
+                });
+            });
+        </script>
 
+        <!-- Scroll Down Indicator (Right Side) -->
+<div class="absolute bottom-6 right-6 flex flex-col items-center text-white">
+    <span class="text-sm uppercase tracking-widest">Scroll Down</span>
+    <svg class="w-6 h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
+
+        
         <!-- Cards Section -->
-        <div class="mt-20 flex bg-red-500">
-            <div class="bg-gray-400 h-[450px] w-[384px] border-8">
-               <h4 class="p-4 barlow text-2xl">PROTECTION FILM</h4>
-               <p class="p-6 pt-32">Shield your vehicle from road debris, scratches, and stains with our high-quality PPF. Maintain a flawless finish while preserving your car’s original paint.</p>
-            </div>
-
-            <div class="bg-gray-400 h-[450px] w-[384px] border-8">
-                <h4 class="p-4 text-2xl barlow">CERAMIC COATING</h4>
-                <p class="p-6 pt-32">Protect your car’s paint with a durable, high-gloss ceramic coating that resists scratches, dirt, and UV damage. Enjoy long-lasting shine and easy maintenance.</p>
-             </div>
-
-             <div class="bg-gray-400 h-[450px] w-[384px] border-8">
-                <h4 class="p-4 barlow text-2xl">TEFLON</h4>
-                <p class="p-6 pt-32">Add an extra layer of protection with our Teflon coating, reducing minor scratches and enhancing your car’s shine. Keep your vehicle looking new with improved durability.</p>
-             </div>
-             <div class="bg-gray-400 h-[450px] w-[384px] border-8">
-                <h4 class="p-4 barlow text-2xl">FOAM WASH</h4>
-                <p class="p-6 pt-32">Get a deep, gentle, and scratch-free clean with our professional foam wash. Remove dirt and grime while preserving your car’s shine and paint quality.</p>
-             </div>
+<div class="mt-20 flex bg-[#0d0d0f] space-x-6 px-10">
+    <!-- Card -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
+        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
+            <h4 class="px-7 text-2xl pt-60 barlow">PROTECTION FILM</h4>
+            <p class="p-6 pt-5">Shield your vehicle from road debris, scratches, and stains with our high-quality PPF. Maintain a flawless finish while preserving your car’s original paint.</p>
         </div>
+        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    </div>
+
+    <!-- Card -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
+        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
+            <h4 class="px-5 text-2xl pt-60 barlow">CERAMIC COATING</h4>
+            <p class="px-5 pt-5">Protect your car’s paint with a durable, high-gloss ceramic coating that resists scratches, dirt, and UV damage. Enjoy long-lasting shine and easy maintenance.</p>
+        </div>
+        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    </div>
+
+    <!-- Card -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
+        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
+            <h4 class="px-5 text-2xl pt-56 barlow">TEFLON</h4>
+            <p class="px-5 pt-5">Add an extra layer of protection with our Teflon coating, reducing minor scratches and enhancing your car’s shine. Keep your vehicle looking new with improved durability.</p>
+        </div>
+        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    </div>
+
+    <!-- Card -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
+        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
+            <h4 class="px-5 text-2xl pt-56 barlow">FOAM WASH</h4>
+            <p class="px-5 pt-5">Get a deep, gentle, and scratch-free clean with our professional foam wash. Remove dirt and grime while preserving your car’s shine and paint quality.</p>
+        </div>
+        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    </div>
+</div>
 
         <!-- Welcome Section -->
-        <div class="mt-40 p-20 bg-black">
-            <p class="text-white ">What we do</p>
-            <div class="mt-7">   
-                <p class="ml-18 text-5xl text-white barlow">
-                    FULL-SERVICE  
+        <div class="mt-40 p-20 bg-[#0d0d0f] flex items-center justify-between">
+            <!-- Left Content -->
+            <div class="max-w-2xl">
+                <p class="text-white">What we do</p>
+                <div class="mt-7">   
+                    <p class="text-5xl text-white barlow">FULL-SERVICE</p>
+                    <h1 class="text-5xl text-red-700 barlow">DETAILING FOR CARS</h1>
+                </div>
+                
+                <h3 class="text-2xl mt-10 text-white barlow">Welcome to Dust Defender Lab!</h3>
+                <p class="mt-10 text-white">
+                    We offer premium Ceramic & Graphene Coating, PPF, and Teflon Coating for ultimate protection and shine. Our Sun Protection Film blocks UV rays, while our Foam Wash ensures a deep, scratch-free clean. Keep your car looking new and protected!
                 </p>
-                <h1 class="text-5xl ml-18 text-red-700 barlow">
-                    DETAILING FOR CARS 
-                </h1>
+                <h2 class="text-5xl mt-10 text-white barlow">8019494909</h2>
             </div>
-            
-            <h3 class="text-2xl mt-10 text-white barlow">
-                Welcome to Dust Defender Lab !
-            </h3>
-            <p class="mr-[700px] mt-10 text-white">
-                We offer premium Ceramic & Graphene Coating, PPF, and Teflon Coating for ultimate protection and shine. Our Sun Protection Film blocks UV rays, while our Foam Wash ensures a deep, scratch-free clean. Keep your car looking new and protected!
-            </p>
-            <h2 class="text-5xl mt-10 text-white barlow">
-                8019494909
-            </h2>
+        
+            <!-- Right Image -->
+            <div class="w-1/2 flex justify-end">
+                <img src="https://i.ibb.co/mrdPtc9t/IMG-20250212-WA0004.jpg" alt="Car Detailing" class="w-[320px] mr-28 rounded-lg shadow-lg">
+            </div>
         </div>
+        
 
         <!-- Second Cards Section -->
-        <div class="flex m-24">
-            <div class="bg-gray-800 h-[290px] w-[299px] mr-10">
-                <h3 class="text-xl px-12 pt-36 font-bold text-white barlow">PREMIUM QUALITY</h3>
-                <p class="text-[16px] text-white px-10 pt-8">High-grade products & expert care.</p>
-            </div>
+    <div class="flex m-24 bg-[#0d0d0f]">
+                    <!-- PREMIUM QUALITY -->
+    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
+    <img src="https://i.ibb.co/chNFHSR1/1XLXbdy.png" alt="Certified Quality" class="w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+    <h3 class="text-xl font-bold text-white barlow">PREMIUM QUALITY</h3>
+    <p class="text-[16px] text-white px-10 pt-2 text-center">High-grade products & expert care.</p>
+    <!-- Dots -->
+    <div class="flex mt-[14px] space-x-[4px]">
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+    </div>
+    </div>
 
-            <div class="bg-gray-800 h-[290px] w-[299px] mr-10">
-                <h3 class="text-xl px-12 pt-36 font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
-                <p class="text-[16px] text-white px-10 pt-3">Trained experts for your car.</p>
-            </div>
+<!-- SKILLED PROFESSIONALS -->
+    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
+    <img src="https://i.ibb.co/27NVGTn9/CU0MS4m.png" alt="Skilled Professional" class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+    <h3 class="text-xl font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
+    <p class="text-[16px] text-white px-10 pt-2 text-center">Trained experts for your car.</p>
+    <!-- Dots -->
+    <div class="flex mt-[14px] space-x-[4px]">
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+    </div>
+    </div>
 
-            <div class="bg-gray-800 h-[290px] w-[299px] mr-10">
-                <h3 class="text-xl px-12 pt-36 font-bold text-white barlow">FREE WARRANTY</h3>
-                <p class="text-[16px] text-white px-10 pt-8">Guaranteed service assurance.</p>
-            </div> 
+<!-- FREE WARRANTY -->
+    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
+    <img src="https://i.ibb.co/0yZqYGbZ/x4Yz6SL.png" class="h-[60px] transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" alt="dengindii">
+    <h3 class="text-xl font-bold text-white barlow mt-5">FREE WARRANTY</h3>
+    <p class="text-[16px] text-white px-10 pt-2 text-center">Guaranteed service assurance.</p>
+    <!-- Dots -->
+    <div class="flex mt-[14px] space-x-[4px]">
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+    </div>
+    </div>
+
+<!-- INTERIOR PROTECTION -->
+    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
+    <img src="https://i.ibb.co/KjhZHL8Q/lNFLMRV.png" alt="Car Wash" class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+    <h3 class="text-xl font-bold text-white barlow">INTERIOR PROTECTION</h3>
+    <p class="text-[16px] text-white px-10 pt-2 text-center">Leather, fabric & dashboard care.</p>
+    <!-- Dots -->
+    <div class="flex mt-[14px] space-x-[4px]">
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        </div>
+        </div>
+
+    </div>
+        
+       <!-- review section  -->
+
+
+        <div>
             
-            <div class="bg-gray-800 h-[290px] w-[299px] mr-10">
-                <h3 class="text-xl px-12 pt-36 font-bold text-white barlow">INTERIOR PROTECTION</h3>
-                <p class="text-[16px] text-white px-10 pt-3">Leather, fabric & dashboard care.</p>
-            </div>
+            <div class="bg-#[0d0d0f] text-white py-10 px-6 relative ">
+                <div class="max-w-2xl mx-auto text-center">
+                  <p class="text-red-500 text-3xl font-bold">“</p>
+                  <p class="text-lg italic" id="review-text">
+                    "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!"
+                  </p>
+                  <p class="mt-4 font-semibold" id="review-author">AVANISH ACHARYA</p>
+                  <p class="text-gray-400 text-sm">Client</p>
+              
+                  <!-- Profile Images -->
+                  <div class="flex justify-center mt-4 space-x-4">
+                    <img src="https://i.ibb.co/fzZ9KKdh/1734938873517-e-1744848000-v-beta-t-vu-EZG-t-WU4-UWKNrx-EUW1-Iy-RTBf-MHCv-Rm-Sl-HZqoo-O9-AM.jpg" alt="Reviewer 1" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                    <img src="https://i.ibb.co/nspDx8J4/20250212-211754.jpg" alt="Reviewer 2" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                    <img src="https://i.ibb.co/b5x7837p/IMG-20250212-212854.jpg" alt="Reviewer 3" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                  </div>
+              
+                  <!-- Navigation Arrows -->
+                  <button onclick="prevReview()" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
+                    &#8592;
+                  </button>
+                  <button onclick="nextReview()" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
+                    &#8594;
+                  </button>
+                </div>
+              </div>
+              
+              <script>
+                const reviews = [
+                  {
+                    text: "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!",
+                    author: "AVANISH ACHARYA"
+                  },
+                  {
+                    text: "Excellent service and great customer support. They were quick to respond to my queries and provided exactly what I needed. Will definitely come back!",
+                    author: "SIDDHARTHA"
+                  },
+                  {
+                    text: "A trustworthy and reliable experience. The quality exceeded my expectations, and the process was smooth from start to finish. Great job!",
+                    author: "JISHNU JP"
+                  }
+                ];
+              
+                let currentIndex = 0;
+              
+                function updateReview() {
+                  document.getElementById("review-text").innerText = reviews[currentIndex].text;
+                  document.getElementById("review-author").innerText = reviews[currentIndex].author;
+                }
+              
+                function prevReview() {
+                  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+                  updateReview();
+                }
+              
+                function nextReview() {
+                  currentIndex = (currentIndex + 1) % reviews.length;
+                  updateReview();
+                }
+              </script>
+              
         </div>
 
         <!-- Footer -->
-        <div class="bg-gray-800 h-[500px] flex">
-            <div>
-                <h2 class="text-3xl px-[50px] pt-20 text-white barlow">Scan this for location</h2>
-                <img src="location-image.jpg" alt="location">
-            </div>
-            <div>
-                <h2 class="text-4xl px-[99px] pt-20 text-white barlow">Address</h2>
-                <p class="text-xl mx-[70px] mt-10 text-white footer-p">Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>ECIL, Subhash Nagar,
-                     Kushaiguda, Secunderabad, <br> Telangana 500062</p>
-                <p class="text-xl mx-[70px] mt-10 text-white footer-p">dustdefenderlab@gmail.com</p>
-                <p class="text-xl mx-[70px] mt-10 text-white footer-p">+91 8019494909</p>
-            </div>
+<div class="">
+    <div class="relative bg-gray-800 min-h-[500px] flex space-x-20 items-start w-full z-10">
+    <div class="m-10">
+        <h2 class="text-4xl pt-10 text-white pb-10 barlow">LOCATION</h2>
 
-            <div>
-                <h2 class="text-4xl text-white barlow pt-20">GET IN TOUCH</h2>
-                <p class="text-xl text-white footer-p m mt-10"><a href="https://www.instagram.com/dust_defender_lab/">Instagram</a></p>
-                <p class="text-xl text-white footer-p mt-5"><a href="#">WhatsApp</a></p>
-            </div>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.57322855122!2d78.5786697749242!3d17.480128983422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d0038591801%3A0xabd1d3e90b14fbb4!2sDust%20Defender%20Lab!5e0!3m2!1sen!2sin!4v1739379960351!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="w-[100px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div>
+        <h2 class="text-4xl px-[80px] pt-20 text-white barlow">ADDRESS</h2>
+        <p class="text-xl mx-[20px] mt-10 text-white footer-p">
+            Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>ECIL, Subhash Nagar,
+            Kushaiguda, Secunderabad, <br> Telangana 500062
+        </p>
+        <p class="text-xl mx-[20px] mt-10 text-white footer-p">dustdefenderlab@gmail.com</p>
+        <p class="text-xl mx-[20px] mt-10 text-white footer-p">+91 8019494909</p>
+    </div>
+
+    <div>
+        <h2 class="text-4xl text-white barlow pt-20 mr-20">GET IN TOUCH</h2>
+        <p class="text-xl text-white footer-p mt-10">
+            <a href="https://www.instagram.com/dust_defender_lab/">Instagram</a>
+        </p>
+        <p class="text-xl text-white footer-p mt-5">
+            <a href="#">WhatsApp</a>
+        </p>
+    </div>
+</div>
+
+            
         </div>
     </div>
 </body>
