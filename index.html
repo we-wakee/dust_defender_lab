@@ -22,41 +22,60 @@
 </head>
 <body>
     <div class="bg-[#0d0d0f]">
-        <div class="relative w-full h-screen overflow-hidden">
-            <!-- Background Video -->
-            <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline>
-                <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        
-            <!-- Content on top of video -->
-            <div class="relative z-10">
-                <div class="flex p-10 text-white items-center">
-                    <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" alt="Dust Defender Lab Logo" class="h-28">
-                    <ol class="text-2xl ml-[700px]">Home</ol>
-                    <ol class="text-2xl ml-[30px]">About Us</ol>
-                    <ol class="text-2xl ml-[30px]">Contact Us</ol>
-                </div>
+        <section>   
+                <div class="relative w-full h-screen overflow-hidden">
+                    <!-- Background Video -->
+                    <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline>
+                        <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 
-                <div>
-                    <h2 class="text-3xl mt-[300px] ml-[130px] barlow text-white ">
-                        FULL SERVICE AND EXCELLENT QUALITY
-                    </h2>
-                    <div class="flex space-x-20 items-center h-screen w-full text-white px-24 ">
-                        <p class="text-[15vw] font-extrabold uppercase barlow leading-none text-center pb-[550px] ">
-                            CAR
-                        </p>
-                        <h1 class="text-[15vw] font-extrabold uppercase barlow leading-none text-center pb-[550px]">
-                            DETAILING
-                        </h1>
+                    <!-- Content on top of video -->
+                    <div class="relative z-10">
+                        <div class="flex p-10 text-white items-center">
+                            <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" 
+                            alt="Dust Defender Lab Logo" 
+                            class="h-16 sm:h-20 lg:h-24">
+                            <div class="flex items-end  space-x-1 sm:space-x-2 ml-8 lg:ml-[900px]">
+                                <ol class="text-lg lg:ml[700px] sm:text-xl lg:text-2xl">Home</ol>
+                                <ol class="text-lg sm:text-xl lg:text-2xl">About Us</ol>
+                                <ol class="text-lg max-sm:text-xl lg:text-2xl">Contact Us</ol>
+                            </div>
+                            
+                        </div>
+
+                        <div >
+                            <h2 class="mt-10 max-sm:p-[50px] max-sm:pt-60 max-sm:text-xl lg:text-4xl lg:mt-[300px] barlow text-white">
+                                FULL SERVICE AND EXCELLENT QUALITY
+                            </h2>
+                            
+                            <div class="flex lg:space-x-20 items-center h-screen w-full text-white lg:px-24 max-sm:px-10 ">
+                                <p class="text-[15vw] font-extrabold uppercase barlow  pb-[550px] max-sm:pb-[900px] max-sm:pr-[40px] ">
+                                    CAR
+                                </p>
+                                <h1 class="text-[15vw] font-extrabold uppercase barlow pb-[550px] max-sm:pb-[900px] max-sm:mr-[100px] ">
+                                    DETAILING
+                                </h1>
+                            </div>
+                            
+                        </div>
                     </div>
-                    
+                
+                    <!-- Overlay to Darken Video (Optional) -->
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
                 </div>
-            </div>
-        
-            <!-- Overlay to Darken Video (Optional) -->
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-        </div>
+
+                        <!-- Scroll Down Indicator (Right Side) -->
+            <div class="absolute lg:bottom-6 lg:right-6 flex flex-col items-center text-white max-sm:bottom-72 max-sm:right-36 max-sm:">
+        <span class="text-sm uppercase tracking-widest">Scroll Down</span>
+        <svg class="w-6 h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+
+
+        </section>
+       
         
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -69,19 +88,13 @@
             });
         </script>
 
-        <!-- Scroll Down Indicator (Right Side) -->
-<div class="absolute bottom-6 right-6 flex flex-col items-center text-white">
-    <span class="text-sm uppercase tracking-widest">Scroll Down</span>
-    <svg class="w-6 h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-</div>
 
         
         <!-- Cards Section -->
 <div class="mt-20 flex bg-[#0d0d0f] space-x-6 px-10">
-    <!-- Card -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+            <div class="flex flex-nowrap justify-center gap-4 max-sm:flex-wrap max-sm:flex-col max-sm:items-center max-sm:gap-3 overflow-hidden">
+    <!-- Card 1 -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
         <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
             <h4 class="px-7 text-2xl pt-60 barlow">PROTECTION FILM</h4>
@@ -90,8 +103,8 @@
         <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
     </div>
 
-    <!-- Card -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+    <!-- Card 2 -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
         <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
             <h4 class="px-5 text-2xl pt-60 barlow">CERAMIC COATING</h4>
@@ -100,8 +113,8 @@
         <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
     </div>
 
-    <!-- Card -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+    <!-- Card 3 -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
         <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
             <h4 class="px-5 text-2xl pt-56 barlow">TEFLON</h4>
@@ -110,8 +123,8 @@
         <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
     </div>
 
-    <!-- Card -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden">
+    <!-- Card 4 -->
+    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
         <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
             <h4 class="px-5 text-2xl pt-56 barlow">FOAM WASH</h4>
@@ -121,10 +134,12 @@
     </div>
 </div>
 
+</div>
+
         <!-- Welcome Section -->
-        <div class="mt-40 p-20 bg-[#0d0d0f] flex items-center justify-between">
+        <div class="mt-40 p-20 bg-[#0d0d0f] flex flex-col lg:flex-row items-center lg:items-start justify-between">
             <!-- Left Content -->
-            <div class="max-w-2xl">
+            <div class="max-w-2xl text-center lg:text-left">
                 <p class="text-white">What we do</p>
                 <div class="mt-7">   
                     <p class="text-5xl text-white barlow">FULL-SERVICE</p>
@@ -138,68 +153,70 @@
                 <h2 class="text-5xl mt-10 text-white barlow">8019494909</h2>
             </div>
         
-            <!-- Right Image -->
-            <div class="w-1/2 flex justify-end">
-                <img src="https://i.ibb.co/mrdPtc9t/IMG-20250212-WA0004.jpg" alt="Car Detailing" class="w-[320px] mr-28 rounded-lg shadow-lg">
+            <!-- Right Image (Moves to Bottom in Mobile) -->
+            <div class="w-1/2 flex justify-end lg:justify-end max-sm:w-full max-sm:flex max-sm:justify-center max-sm:mt-10">
+                <img src="https://i.ibb.co/mrdPtc9t/IMG-20250212-WA0004.jpg" 
+                     alt="Car Detailing" 
+                     class="w-[320px] lg:mr-28 rounded-lg shadow-lg">
             </div>
         </div>
         
+        
 
         <!-- Second Cards Section -->
-    <div class="flex m-24 bg-[#0d0d0f]">
-                    <!-- PREMIUM QUALITY -->
-    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
-    <img src="https://i.ibb.co/chNFHSR1/1XLXbdy.png" alt="Certified Quality" class="w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-    <h3 class="text-xl font-bold text-white barlow">PREMIUM QUALITY</h3>
-    <p class="text-[16px] text-white px-10 pt-2 text-center">High-grade products & expert care.</p>
-    <!-- Dots -->
-    <div class="flex mt-[14px] space-x-[4px]">
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-    </div>
-    </div>
-
-<!-- SKILLED PROFESSIONALS -->
-    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
-    <img src="https://i.ibb.co/27NVGTn9/CU0MS4m.png" alt="Skilled Professional" class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-    <h3 class="text-xl font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
-    <p class="text-[16px] text-white px-10 pt-2 text-center">Trained experts for your car.</p>
-    <!-- Dots -->
-    <div class="flex mt-[14px] space-x-[4px]">
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-    </div>
-    </div>
-
-<!-- FREE WARRANTY -->
-    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
-    <img src="https://i.ibb.co/0yZqYGbZ/x4Yz6SL.png" class="h-[60px] transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" alt="dengindii">
-    <h3 class="text-xl font-bold text-white barlow mt-5">FREE WARRANTY</h3>
-    <p class="text-[16px] text-white px-10 pt-2 text-center">Guaranteed service assurance.</p>
-    <!-- Dots -->
-    <div class="flex mt-[14px] space-x-[4px]">
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-    </div>
-    </div>
-
-<!-- INTERIOR PROTECTION -->
-    <div class="bg-[#232335] h-[290px] w-[299px] mr-10 flex flex-col items-center justify-center group">
-    <img src="https://i.ibb.co/KjhZHL8Q/lNFLMRV.png" alt="Car Wash" class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-    <h3 class="text-xl font-bold text-white barlow">INTERIOR PROTECTION</h3>
-    <p class="text-[16px] text-white px-10 pt-2 text-center">Leather, fabric & dashboard care.</p>
-    <!-- Dots -->
-    <div class="flex mt-[14px] space-x-[4px]">
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-        <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <div class="m-24 bg-[#0d0d0f] flex flex-wrap justify-center lg:flex-nowrap">
+            <!-- PREMIUM QUALITY -->
+            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
+                <img src="https://i.ibb.co/chNFHSR1/1XLXbdy.png" alt="Certified Quality" 
+                     class="w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                <h3 class="text-xl font-bold text-white barlow">PREMIUM QUALITY</h3>
+                <p class="text-[16px] text-white px-10 pt-2 text-center">High-grade products & expert care.</p>
+                <div class="flex mt-[14px] space-x-[4px]">
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                </div>
+            </div>
+        
+            <!-- SKILLED PROFESSIONALS -->
+            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
+                <img src="https://i.ibb.co/27NVGTn9/CU0MS4m.png" alt="Skilled Professional" 
+                     class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                <h3 class="text-xl font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
+                <p class="text-[16px] text-white px-10 pt-2 text-center">Trained experts for your car.</p>
+                <div class="flex mt-[14px] space-x-[4px]">
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                </div>
+            </div>
+        
+            <!-- FREE WARRANTY -->
+            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
+                <img src="https://i.ibb.co/0yZqYGbZ/x4Yz6SL.png" class="h-[60px] transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" alt="dengindii">
+                <h3 class="text-xl font-bold text-white barlow mt-5">FREE WARRANTY</h3>
+                <p class="text-[16px] text-white px-10 pt-2 text-center">Guaranteed service assurance.</p>
+                <div class="flex mt-[14px] space-x-[4px]">
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                </div>
+            </div>
+        
+            <!-- INTERIOR PROTECTION -->
+            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
+                <img src="https://i.ibb.co/KjhZHL8Q/lNFLMRV.png" alt="Car Wash" 
+                     class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                <h3 class="text-xl font-bold text-white barlow">INTERIOR PROTECTION</h3>
+                <p class="text-[16px] text-white px-10 pt-2 text-center">Leather, fabric & dashboard care.</p>
+                <div class="flex mt-[14px] space-x-[4px]">
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+                </div>
+            </div>
         </div>
-        </div>
-
-    </div>
+        
         
        <!-- review section  -->
 
@@ -269,37 +286,57 @@
         </div>
 
         <!-- Footer -->
-<div class="">
-    <div class="relative bg-gray-800 min-h-[500px] flex space-x-20 items-start w-full z-10">
-    <div class="m-10">
-        <h2 class="text-4xl pt-10 text-white pb-10 barlow">LOCATION</h2>
 
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.57322855122!2d78.5786697749242!3d17.480128983422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d0038591801%3A0xabd1d3e90b14fbb4!2sDust%20Defender%20Lab!5e0!3m2!1sen!2sin!4v1739379960351!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="w-[100px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-
-    <div>
-        <h2 class="text-4xl px-[80px] pt-20 text-white barlow">ADDRESS</h2>
-        <p class="text-xl mx-[20px] mt-10 text-white footer-p">
-            Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>ECIL, Subhash Nagar,
-            Kushaiguda, Secunderabad, <br> Telangana 500062
-        </p>
-        <p class="text-xl mx-[20px] mt-10 text-white footer-p">dustdefenderlab@gmail.com</p>
-        <p class="text-xl mx-[20px] mt-10 text-white footer-p">+91 8019494909</p>
-    </div>
-
-    <div>
-        <h2 class="text-4xl text-white barlow pt-20 mr-20">GET IN TOUCH</h2>
-        <p class="text-xl text-white footer-p mt-10">
-            <a href="https://www.instagram.com/dust_defender_lab/">Instagram</a>
-        </p>
-        <p class="text-xl text-white footer-p mt-5">
-            <a href="#">WhatsApp</a>
-        </p>
-    </div>
-</div>
-
-            
+        <div class="bg-[#0d0d0f] min-h-[500px] flex flex-wrap lg:flex-nowrap space-y-10 lg:space-y-0 lg:space-x-20 items-start w-full z-10 p-10">
+    
+            <!-- Location (Map) -->
+            <div class="w-full lg:w-auto flex flex-col items-center lg:items-start">
+                <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                    LOCATION
+                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                </h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.57322855122!2d78.5786697749242!3d17.480128983422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d0038591801%3A0xabd1d3e90b14fbb4!2sDust%20Defender%20Lab!5e0!3m2!1sen!2sin!4v1739379960351!5m2!1sen!2sin" 
+                    width="100%" height="350" 
+                    class="rounded-lg shadow-lg sm:w-[90%] lg:w-[600px]"
+                    style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        
+            <!-- Address -->
+            <div class="w-full lg:w-auto text-center lg:text-left">
+                <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                    ADDRESS
+                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                </h2>
+                <p class="text-lg text-gray-300 mt-6">
+                    Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>
+                    ECIL, Subhash Nagar, Kushaiguda, Secunderabad, <br>
+                    Telangana 500062
+                </p>
+                <p class="text-lg text-gray-300 mt-4">📩 dustdefenderlab@gmail.com</p>
+                <p class="text-lg text-gray-300 mt-4">📞 +91 8019494909</p>
+                <p class="text-lg text-gray-300 mt-4">📞 +91 7285988988</p>
+            </div>
+        
+            <!-- Get in Touch -->
+            <div class="w-full lg:w-auto text-center lg:text-left">
+                <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                    GET IN TOUCH
+                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                </h2>
+                <p class="text-lg text-gray-300 mt-6">
+                    <a href="https://www.instagram.com/dust_defender_lab/" class="hover:text-red-500 transition duration-300">📷 Instagram</a>
+                </p>
+                <p class="text-lg text-gray-300 mt-4">
+                    <a href="#" class="hover:text-green-500 transition duration-300">💬 WhatsApp</a>
+                </p>
+            </div>
+        
         </div>
+        
+        
     </div>
 </body>
 </html>
