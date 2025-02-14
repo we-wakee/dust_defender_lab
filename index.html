@@ -23,7 +23,7 @@
 <body>
     <div class="bg-[#0d0d0f]">
         <section>   
-                <div class="relative w-full h-screen overflow-hidden">
+                <div class="relative w-full h-screen overflow-hidden" id="start">
                     <!-- Background Video -->
                     <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline>
                         <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
@@ -31,21 +31,22 @@
                     </video>
                 
                     <!-- Content on top of video -->
-                    <div class="relative z-10">
+                    <div class="relative z-10" id="start">
                         <div class="flex p-10 text-white items-center">
                             <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" 
                             alt="Dust Defender Lab Logo" 
                             class="h-16 sm:h-20 lg:h-24">
-                            <div class="flex items-end  space-x-1 sm:space-x-2 ml-8 lg:ml-[900px]">
-                                <ol class="text-lg lg:ml[700px] sm:text-xl lg:text-2xl">Home</ol>
-                                <ol class="text-lg sm:text-xl lg:text-2xl">About Us</ol>
-                                <ol class="text-lg max-sm:text-xl lg:text-2xl">Contact Us</ol>
+                            <div class="flex items-end space-x-2 sm:space-x-4 ml-16 lg:ml-auto">
+                                <a href="#start" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">Home</a>
+                                <a href="#mid" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">About Us</a>
+                                <a href="#end" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">Contact Us</a>
                             </div>
+                            
                             
                         </div>
 
                         <div >
-                            <h2 class="mt-10 max-sm:p-[50px] max-sm:pt-60 max-sm:text-xl lg:text-4xl lg:mt-[300px] barlow text-white">
+                            <h2 class="mt-10 max-sm:p-[50px]  max-sm:pt-60 max-sm:text-xl lg:text-4xl lg:mt-[300px] lg:ml-[90px] barlow text-white">
                                 FULL SERVICE AND EXCELLENT QUALITY
                             </h2>
                             
@@ -57,7 +58,18 @@
                                     DETAILING
                                 </h1>
                             </div>
-                            
+                               
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const video = document.getElementById("backgroundVideo");
+                
+                video.addEventListener("ended", function () {
+                    video.currentTime = 0; // Restart from beginning
+                    video.play(); // Play again
+                });
+            });
+        </script>
+
                         </div>
                     </div>
                 
@@ -76,22 +88,11 @@
 
         </section>
        
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const video = document.getElementById("backgroundVideo");
-                
-                video.addEventListener("ended", function () {
-                    video.currentTime = 0; // Restart from beginning
-                    video.play(); // Play again
-                });
-            });
-        </script>
-
+     
 
         
         <!-- Cards Section -->
-<div class="mt-20 flex bg-[#0d0d0f] space-x-6 px-10">
+        <div class="mt-20 flex bg-[#0d0d0f] space-x-6 px-10">
             <div class="flex flex-nowrap justify-center gap-4 max-sm:flex-wrap max-sm:flex-col max-sm:items-center max-sm:gap-3 overflow-hidden">
     <!-- Card 1 -->
     <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
@@ -104,14 +105,27 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
-        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
-        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
-            <h4 class="px-5 text-2xl pt-60 barlow">CERAMIC COATING</h4>
-            <p class="px-5 pt-5">Protect your car’s paint with a durable, high-gloss ceramic coating that resists scratches, dirt, and UV damage. Enjoy long-lasting shine and easy maintenance.</p>
-        </div>
-        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    <div class="group relative h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]" 
+     style="background: url('https://i.ibb.co/VYWJVSp6/Whats-App-Image-2025-02-14-at-10-04-13-AM.jpg') center/cover no-repeat; background-size: 120%;">
+    
+    <!-- Dark Overlay for Better Readability -->
+    <div class="absolute inset-0 bg-black opacity-40 group-hover:opacity-50 transition duration-300"></div>
+
+    <!-- Text Content -->
+    <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4 text-white">
+        <h4 class="px-5 text-2xl pt-60 font-bold barlow drop-shadow-lg">CERAMIC COATING</h4>
+        <p class="px-5 pt-5 drop-shadow-lg">
+            Protect your car’s paint with a durable, high-gloss ceramic coating that resists scratches, dirt, and UV damage. 
+            Enjoy long-lasting shine and easy maintenance.
+        </p>
     </div>
+
+    <!-- Hover Arrow -->
+    <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl text-white drop-shadow-lg">
+        →
+    </span>
+</div>
+
 
     <!-- Card 3 -->
     <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
@@ -124,22 +138,30 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="group relative bg-gray-400 h-[450px] w-[384px] border-8 overflow-hidden max-sm:w-full max-sm:max-w-[400px]">
-        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition duration-300"></div>
-        <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4">
-            <h4 class="px-5 text-2xl pt-56 barlow">FOAM WASH</h4>
-            <p class="px-5 pt-5">Get a deep, gentle, and scratch-free clean with our professional foam wash. Remove dirt and grime while preserving your car’s shine and paint quality.</p>
-        </div>
-        <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl">→</span>
+    <div class="group relative h-[450px] w-[384px] border-8 overflow-hidden bg-cover bg-center max-sm:w-full max-sm:max-w-[400px] shadow-lg" 
+     style="background-image: url('https://i.ibb.co/Ndw67SZK/Whats-App-Image-2025-02-14-at-9-42-04-AM.jpg');">
+    
+    <!-- Dark Overlay for Better Readability -->
+    <div class="absolute inset-0 bg-black opacity-30 group-hover:opacity-50 transition duration-300"></div>
+
+    <!-- Text Content with Shadow -->
+    <div class="relative z-10 transition-transform duration-300 group-hover:-translate-y-4 text-white text-shadow-md">
+        <h4 class="px-5 text-2xl pt-56 font-bold barlow drop-shadow-lg">FOAM WASH</h4>
+        <p class="px-5 pt-5 text-sm drop-shadow-md">Get a deep, gentle, and scratch-free clean with our professional foam wash. Remove dirt and grime while preserving your car’s shine and paint quality.</p>
     </div>
+
+    <!-- Hover Arrow -->
+    <span class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0 text-2xl text-white drop-shadow-lg">→</span>
 </div>
 
 </div>
+
+        </div>
 
         <!-- Welcome Section -->
         <div class="mt-40 p-20 bg-[#0d0d0f] flex flex-col lg:flex-row items-center lg:items-start justify-between">
             <!-- Left Content -->
-            <div class="max-w-2xl text-center lg:text-left">
+            <div class="max-w-2xl text-center lg:text-left" id="mid">
                 <p class="text-white">What we do</p>
                 <div class="mt-7">   
                     <p class="text-5xl text-white barlow">FULL-SERVICE</p>
@@ -160,181 +182,250 @@
                      class="w-[320px] lg:mr-28 rounded-lg shadow-lg">
             </div>
         </div>
-        
-        
 
-        <!-- Second Cards Section -->
-        <div class="m-24 bg-[#0d0d0f] flex flex-wrap justify-center lg:flex-nowrap">
-            <!-- PREMIUM QUALITY -->
-            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
-                <img src="https://i.ibb.co/chNFHSR1/1XLXbdy.png" alt="Certified Quality" 
-                     class="w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-                <h3 class="text-xl font-bold text-white barlow">PREMIUM QUALITY</h3>
-                <p class="text-[16px] text-white px-10 pt-2 text-center">High-grade products & expert care.</p>
-                <div class="flex mt-[14px] space-x-[4px]">
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+        <!-- why choose us  -->
+        <section class="bg-[#0D0D0F] py-12">
+            <div class="container mx-auto px-6 lg:px-20">
+              <h2 class="text-3xl font-bold text-center text-[#E63946] mb-8">Why Choose Us?</h2>
+          
+              <div class="flex flex-wrap justify-center lg:justify-between">
+                <!-- PREMIUM QUALITY -->
+                <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group">
+                  <img src="https://i.ibb.co/chNFHSR1/1XLXbdy.png" alt="Certified Quality" 
+                       class="w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                  <h3 class="text-xl font-bold text-white barlow">PREMIUM QUALITY</h3>
+                  <p class="text-[16px] text-white px-6 pt-2 text-center">High-grade products & expert care.</p>
                 </div>
-            </div>
-        
-            <!-- SKILLED PROFESSIONALS -->
-            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
-                <img src="https://i.ibb.co/27NVGTn9/CU0MS4m.png" alt="Skilled Professional" 
-                     class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-                <h3 class="text-xl font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
-                <p class="text-[16px] text-white px-10 pt-2 text-center">Trained experts for your car.</p>
-                <div class="flex mt-[14px] space-x-[4px]">
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+          
+                <!-- SKILLED PROFESSIONALS (Fixed Alignment) -->
+                <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group">
+                  <img src="https://i.ibb.co/27NVGTn9/CU0MS4m.png" alt="Skilled Professional" 
+                       class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                  <h3 class="text-xl font-bold text-white barlow">SKILLED PROFESSIONALS</h3>
+                  <p class="text-[16px] text-white px-6 pt-2 text-center">Trained experts for your car.</p>
                 </div>
-            </div>
-        
-            <!-- FREE WARRANTY -->
-            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
-                <img src="https://i.ibb.co/0yZqYGbZ/x4Yz6SL.png" class="h-[60px] transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" alt="dengindii">
-                <h3 class="text-xl font-bold text-white barlow mt-5">FREE WARRANTY</h3>
-                <p class="text-[16px] text-white px-10 pt-2 text-center">Guaranteed service assurance.</p>
-                <div class="flex mt-[14px] space-x-[4px]">
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
+          
+                <!-- FREE WARRANTY -->
+                <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group">
+                  <img src="https://i.ibb.co/0yZqYGbZ/x4Yz6SL.png" class="h-[60px] transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert" alt="Warranty">
+                  <h3 class="text-xl font-bold text-white barlow mt-5">FREE WARRANTY</h3>
+                  <p class="text-[16px] text-white px-6 pt-2 text-center">Guaranteed service assurance.</p>
                 </div>
-            </div>
-        
-            <!-- INTERIOR PROTECTION -->
-            <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group sm:w-[48%] lg:w-[299px]">
-                <img src="https://i.ibb.co/KjhZHL8Q/lNFLMRV.png" alt="Car Wash" 
-                     class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
-                <h3 class="text-xl font-bold text-white barlow">INTERIOR PROTECTION</h3>
-                <p class="text-[16px] text-white px-10 pt-2 text-center">Leather, fabric & dashboard care.</p>
-                <div class="flex mt-[14px] space-x-[4px]">
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                    <span class="h-[5px] w-[5px] bg-red-500 rounded-full transition-all duration-300 group-hover:bg-white"></span>
-                </div>
-            </div>
-        </div>
-        
-        
-       <!-- review section  -->
-
-
-        <div>
-            
-            <div class="bg-#[0d0d0f] text-white py-10 px-6 relative ">
-                <div class="max-w-2xl mx-auto text-center">
-                  <p class="text-red-500 text-3xl font-bold">“</p>
-                  <p class="text-lg italic" id="review-text">
-                    "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!"
-                  </p>
-                  <p class="mt-4 font-semibold" id="review-author">AVANISH ACHARYA</p>
-                  <p class="text-gray-400 text-sm">Client</p>
-              
-                  <!-- Profile Images -->
-                  <div class="flex justify-center mt-4 space-x-4">
-                    <img src="https://i.ibb.co/fzZ9KKdh/1734938873517-e-1744848000-v-beta-t-vu-EZG-t-WU4-UWKNrx-EUW1-Iy-RTBf-MHCv-Rm-Sl-HZqoo-O9-AM.jpg" alt="Reviewer 1" class="w-12 h-12 rounded-full border-2 border-gray-600">
-                    <img src="https://i.ibb.co/nspDx8J4/20250212-211754.jpg" alt="Reviewer 2" class="w-12 h-12 rounded-full border-2 border-gray-600">
-                    <img src="https://i.ibb.co/b5x7837p/IMG-20250212-212854.jpg" alt="Reviewer 3" class="w-12 h-12 rounded-full border-2 border-gray-600">
-                  </div>
-              
-                  <!-- Navigation Arrows -->
-                  <button onclick="prevReview()" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
-                    &#8592;
-                  </button>
-                  <button onclick="nextReview()" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
-                    &#8594;
-                  </button>
+          
+                <!-- INTERIOR PROTECTION -->
+                <div class="bg-[#232335] h-[290px] w-[299px] m-4 flex flex-col items-center justify-center group">
+                  <img src="https://i.ibb.co/KjhZHL8Q/lNFLMRV.png" alt="Car Wash" 
+                       class="h-16 w-16 mb-4 transition-all duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert">
+                  <h3 class="text-xl font-bold text-white barlow">INTERIOR PROTECTION</h3>
+                  <p class="text-[16px] text-white px-6 pt-2 text-center">Leather, fabric & dashboard care.</p>
                 </div>
               </div>
-              
-              <script>
-                const reviews = [
-                  {
-                    text: "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!",
-                    author: "AVANISH ACHARYA"
-                  },
-                  {
-                    text: "Excellent service and great customer support. They were quick to respond to my queries and provided exactly what I needed. Will definitely come back!",
-                    author: "SIDDHARTHA"
-                  },
-                  {
-                    text: "A trustworthy and reliable experience. The quality exceeded my expectations, and the process was smooth from start to finish. Great job!",
-                    author: "JISHNU JP"
-                  }
-                ];
-              
-                let currentIndex = 0;
-              
-                function updateReview() {
-                  document.getElementById("review-text").innerText = reviews[currentIndex].text;
-                  document.getElementById("review-author").innerText = reviews[currentIndex].author;
-                }
-              
-                function prevReview() {
-                  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-                  updateReview();
-                }
-              
-                function nextReview() {
-                  currentIndex = (currentIndex + 1) % reviews.length;
-                  updateReview();
-                }
-              </script>
-              
-        </div>
+            </div>
+          </section>
+          
+        
+        
+        <!-- founder section  -->
+        <section class="py-16 px-6 lg:px-24 bg-[#your-bg-color] text-white">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center">
+                
+                <!-- Founders Image -->
+                <div class="lg:w-1/3 flex justify-center">
+                    <img src="https://i.ibb.co/your-image-path.png" 
+                         alt="Yengaldas Saibaba & Dharam Singh" 
+                         class="w-64 h-64 lg:w-80 lg:h-80 object-cover rounded-full border-4 border-red-500">
+                </div>
+        
+                <!-- Founders Info -->
+                <div class="lg:w-2/3 text-center lg:text-left mt-8 lg:mt-0 lg:ml-12">
+                    <p class="text-lg lg:text-2xl font-semibold text-red-500">Founders</p>
+                    <h2 class="mt-2 text-3xl lg:text-4xl font-bold">Yengaldas Saibaba & Dharam Singh</h2>
+                    <p class="mt-4 text-sm lg:text-base text-gray-300 leading-relaxed">
+                        Together, Yengaldas Saibaba and Dharam Singh have built a brand that represents quality, innovation, 
+                        and customer satisfaction. With years of industry experience, they are committed to delivering 
+                        the highest standards in car detailing. Their leadership drives the company’s success, ensuring 
+                        every client receives premium service and care.
+                    </p>
+                </div>
+        
+            </div>
+        </section>
+        
+        <!-- Franchise Section -->
+         <section>
+            <div class="bg-[#0d0d0f] text-white py-16 px-6 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-red-500">Grow with Us – Franchise Opportunities</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto">
+                    Join us in redefining car detailing excellence! Be a part of an emerging brand with a promising future.  
+                    If you're passionate about high-quality service and looking for a rewarding business opportunity,  
+                    let’s build something amazing together.
+                </p>
+            
+                <!-- Icons representing franchise benefits -->
+                <div class="flex justify-center gap-8 mt-8">
+                    <div class="text-center">
+                        <span class="text-4xl text-red-500">🚗</span>
+                        <p class="mt-2 text-sm">Premium Services</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-4xl text-red-500">📈</span>
+                        <p class="mt-2 text-sm">Growing Market</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-4xl text-red-500">🤝</span>
+                        <p class="mt-2 text-sm">Strong Support</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-4xl text-red-500">🏆</span>
+                        <p class="mt-2 text-sm">Quality Assurance</p>
+                    </div>
+                </div>
+            
+                <!-- Call to Action with configured links -->
+                <div class="mt-6 flex justify-center gap-4">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dustdefenderlab@gmail.com" 
+                       class="bg-red-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-red-600 transition">
+                        Email Us
+                    </a>
+                    <a href="tel:+918019494909" 
+                       class="bg-red-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-red-600 transition">
+                        Call Now
+                    </a>
+                </div>
+                    </div>
+            
+                    <!-- 🔥 Stylish Separator -->
+                    <div class="relative py-12">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-4/5 h-1 bg-gradient-to-r from-red-500 via-gray-700 to-red-500 animate-pulse rounded-md"></div>
+                </div>
+                    </div>
+            
+         </section>
+       
+        <!-- Review Section -->
+        <section>
+            <div class="bg-[#0d0d0f] text-white py-16 px-6 relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">What Our Clients Say</h2>
+                <p class="text-gray-400 text-lg mb-8">
+                    Hear from our happy clients who have experienced our service.
+                </p>
+        
+                <div class="bg-[#1a1a1d] p-8 rounded-lg shadow-lg relative">
+                    <p class="text-red-500 text-5xl font-bold">“</p>
+                    <p class="text-lg italic" id="review-text">
+                        "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!"
+                    </p>
+                    <p class="mt-4 font-semibold text-xl" id="review-author">AVANISH ACHARYA</p>
+                    <p class="text-gray-400 text-sm">Client</p>
+        
+                    <div class="flex justify-center mt-6 space-x-4">
+                        <img src="https://i.ibb.co/fzZ9KKdh/1734938873517-e-1744848000-v-beta-t-vu-EZG-t-WU4-UWKNrx-EUW1-Iy-RTBf-MHCv-Rm-Sl-HZqoo-O9-AM.jpg" 
+                             alt="Reviewer 1" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                        <img src="https://i.ibb.co/nspDx8J4/20250212-211754.jpg" 
+                             alt="Reviewer 2" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                        <img src="https://i.ibb.co/b5x7837p/IMG-20250212-212854.jpg" 
+                             alt="Reviewer 3" class="w-12 h-12 rounded-full border-2 border-gray-600">
+                    </div>
+        
+                    <!-- Navigation Arrows -->
+                    <button onclick="prevReview()" 
+                            class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
+                        &#8592;
+                    </button>
+                    <button onclick="nextReview()" 
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white text-2xl">
+                        &#8594;
+                    </button>
+                </div>
+                <script>
+                    const reviews = [
+                        { text: "I was really impressed with the professionalism and attention to detail. The team went above and beyond to ensure everything was handled perfectly. Highly recommend!", author: "AVANISH ACHARYA" },
+                        { text: "Excellent service and great customer support. They were quick to respond to my queries and provided exactly what I needed. Will definitely come back!", author: "SIDDHARTHA" },
+                        { text: "A trustworthy and reliable experience. The quality exceeded my expectations, and the process was smooth from start to finish. Great job!", author: "JISHNU JP" }
+                    ];
+                
+                    let currentIndex = 0;
+                
+                    function updateReview() {
+                        document.getElementById("review-text").innerText = reviews[currentIndex].text;
+                        document.getElementById("review-author").innerText = reviews[currentIndex].author;
+                    }
+                
+                    function prevReview() {
+                        currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+                        updateReview();
+                    }
+                
+                    function nextReview() {
+                        currentIndex = (currentIndex + 1) % reviews.length;
+                        updateReview();
+                    }
+                </script>
+                
+            </div>
+                </div>
+            
+        </section>
+
 
         <!-- Footer -->
-
-        <div class="bg-[#0d0d0f] min-h-[500px] flex flex-wrap lg:flex-nowrap space-y-10 lg:space-y-0 lg:space-x-20 items-start w-full z-10 p-10">
+        
+        <section id="end">
+            <div class="bg-[#0d0d0f] min-h-[500px] flex flex-wrap lg:flex-nowrap space-y-10 lg:space-y-0 lg:space-x-20 items-start w-full z-10 p-10">
     
-            <!-- Location (Map) -->
-            <div class="w-full lg:w-auto flex flex-col items-center lg:items-start">
-                <h2 class="text-4xl text-white pb-2 barlow inline-block">
-                    LOCATION
-                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
-                </h2>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.57322855122!2d78.5786697749242!3d17.480128983422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d0038591801%3A0xabd1d3e90b14fbb4!2sDust%20Defender%20Lab!5e0!3m2!1sen!2sin!4v1739379960351!5m2!1sen!2sin" 
-                    width="100%" height="350" 
-                    class="rounded-lg shadow-lg sm:w-[90%] lg:w-[600px]"
-                    style="border:0;" allowfullscreen loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <!-- Location (Map) -->
+                <div class="w-full lg:w-auto flex flex-col items-center lg:items-start">
+                    <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                        LOCATION
+                        <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                    </h2>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.57322855122!2d78.5786697749242!3d17.480128983422972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d0038591801%3A0xabd1d3e90b14fbb4!2sDust%20Defender%20Lab!5e0!3m2!1sen!2sin!4v1739379960351!5m2!1sen!2sin" 
+                        width="100%" height="350" 
+                        class="rounded-lg shadow-lg sm:w-[90%] lg:w-[600px]"
+                        style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            
+                <!-- Address -->
+                <div class="w-full lg:w-auto text-center lg:text-left">
+                    <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                        ADDRESS
+                        <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mt-6">
+                        Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>
+                        ECIL, Subhash Nagar, Kushaiguda, Secunderabad, <br>
+                        Telangana 500062
+                    </p>
+                    <p class="text-lg text-gray-300 mt-4">📩 dustdefenderlab@gmail.com</p>
+                    <p class="text-lg text-gray-300 mt-4">📞 +91 8019494909</p>
+                    <p class="text-lg text-gray-300 mt-4">📞 +91 7285988988</p>
+                </div>
+            
+                <!-- Get in Touch -->
+                <div class="w-full lg:w-auto text-center lg:text-left">
+                    <h2 class="text-4xl text-white pb-2 barlow inline-block">
+                        GET IN TOUCH
+                        <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mt-6">
+                        <a href="https://www.instagram.com/dust_defender_lab/" 
+                           class="hover:text-red-500 transition duration-300">📷 Instagram</a>
+                    </p>
+                    <p class="text-lg text-gray-300 mt-4">
+                        <a href="https://wa.me/918019494909" 
+                           class="hover:text-green-500 transition duration-300">💬 WhatsApp</a>
+                    </p>
+                </div>
+                
+            
             </div>
-        
-            <!-- Address -->
-            <div class="w-full lg:w-auto text-center lg:text-left">
-                <h2 class="text-4xl text-white pb-2 barlow inline-block">
-                    ADDRESS
-                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
-                </h2>
-                <p class="text-lg text-gray-300 mt-6">
-                    Plot no 22, beside Union Bank, Nagarjuna Nagar, <br>
-                    ECIL, Subhash Nagar, Kushaiguda, Secunderabad, <br>
-                    Telangana 500062
-                </p>
-                <p class="text-lg text-gray-300 mt-4">📩 dustdefenderlab@gmail.com</p>
-                <p class="text-lg text-gray-300 mt-4">📞 +91 8019494909</p>
-                <p class="text-lg text-gray-300 mt-4">📞 +91 7285988988</p>
-            </div>
-        
-            <!-- Get in Touch -->
-            <div class="w-full lg:w-auto text-center lg:text-left">
-                <h2 class="text-4xl text-white pb-2 barlow inline-block">
-                    GET IN TOUCH
-                    <span class="block w-full h-1 bg-red-600 rounded-md mt-1"></span>
-                </h2>
-                <p class="text-lg text-gray-300 mt-6">
-                    <a href="https://www.instagram.com/dust_defender_lab/" class="hover:text-red-500 transition duration-300">📷 Instagram</a>
-                </p>
-                <p class="text-lg text-gray-300 mt-4">
-                    <a href="#" class="hover:text-green-500 transition duration-300">💬 WhatsApp</a>
-                </p>
-            </div>
-        
-        </div>
+        </section>
+      
         
         
     </div>
