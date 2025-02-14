@@ -23,44 +23,54 @@
 <body>
     <div class="bg-[#0d0d0f]">
         <section>   
-            <div class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center" id="start">
-                <!-- Background Video -->
-                <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline preload="auto">
-                    <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-        
-                <!-- Overlay to Darken Video -->
-                <div class="absolute inset-0 bg-black opacity-50"></div>
-        
-                <!-- Navbar (Now Above Overlay for Better Visibility) -->
+            <div class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center bg-black" id="start">
+                <!-- Navbar -->
                 <div class="absolute top-0 left-0 w-full px-6 sm:px-10 lg:px-24 text-white z-20">
                     <div class="flex w-full justify-between items-center py-4">
                         <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" 
                              alt="Dust Defender Lab Logo" 
                              class="h-10 sm:h-16 lg:h-20">
-                        <div class="flex space-x-4 text-xs sm:text-sm lg:text-lg">
-                            <a href="#start" class="hover:text-gray-300">Home</a>
-                            <a href="#mid" class="hover:text-gray-300">About Us</a>
-                            <a href="#end" class="hover:text-gray-300">Contact Us</a>
+                        <div class="flex space-x-4 text-xs sm:text-sm lg:text-lg hidden sm:flex">
+                            <a href="#start" class="hover:text-red-500">Home</a>
+                            <a href="#mid" class="hover:text-red-500">About Us</a>
+                            <a href="#end" class="hover:text-red-500">Contact Us</a>
+                        </div>
+        
+                        <!-- Mobile Hamburger Menu -->
+                        <div class="sm:hidden">
+                            <button id="menuButton" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
         
-                <!-- Content on top of video -->
+                <!-- Mobile Menu Options (Hidden by Default) -->
+                <div id="mobileMenu" class="hidden sm:hidden text-center space-y-4 mt-6">
+                    <a href="#start" class="block text-white hover:text-red-500">Home</a>
+                    <a href="#mid" class="block text-white hover:text-red-500">About Us</a>
+                    <a href="#end" class="block text-white hover:text-red-500">Contact Us</a>
+                </div>
+        
+                <!-- Content -->
                 <div class="relative z-10 w-full px-6 sm:px-10 lg:px-24 text-white flex flex-col items-center">
-                    <h2 class="mt-2 sm:mt-4 text-sm sm:text-2xl lg:text-4xl font-semibold">
-                        FULL SERVICE AND EXCELLENT QUALITY
+                    <h2 class="mt-2 sm:mt-4 text-sm sm:text-2xl lg:text-4xl font-semibold text-red-500">
+                        DEFEND YOUR SHINE, ELEVATE YOUR RIDE
                     </h2>
         
                     <!-- Scrollable Text Wrapper (Only for Mobile) -->
                     <div class="w-full overflow-x-auto whitespace-nowrap scrollbar-hide sm:overflow-visible">
                         <div class="flex flex-col justify-center items-center mt-4">
-                            <p class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none">
-                                CAR
-                            </p>
-                            <h1 class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none">
-                                DETAILING
+                            <h1 class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none text-white">
+                                CAR 
+                            </h1>
+                            <h1 class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none text-red-500">
+                                DETAILING 
+                            </h1>
+                            <h1 class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none text-white">
+                                STUDIO 
                             </h1>
                         </div>
                     </div>
@@ -69,24 +79,23 @@
                 <!-- Scroll Down Indicator -->
                 <div class="absolute lg:bottom-10 max-sm:bottom-80 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white">
                     <span class="text-xs sm:text-sm uppercase tracking-widest">Scroll Down</span>
-                    <svg class="w-5 h-5 sm:w-6 sm:h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6 mt-2 animate-bounce text-red-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
             </div>
+        
+            <script>
+                const menuButton = document.getElementById("menuButton");
+                const mobileMenu = document.getElementById("mobileMenu");
+        
+                menuButton.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+                });
+            </script>
         </section>
         
-       
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const video = document.getElementById("backgroundVideo");
-        video.addEventListener("ended", function () {
-            video.currentTime = 0;
-            video.play();
-        });
-    });
-</script>
 
        
      
