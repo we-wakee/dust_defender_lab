@@ -23,70 +23,71 @@
 <body>
     <div class="bg-[#0d0d0f]">
         <section>   
-                <div class="relative w-full h-screen overflow-hidden" id="start">
-                    <!-- Background Video -->
-                    <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline>
-                        <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                
-                    <!-- Content on top of video -->
-                    <div class="relative z-10" id="start">
-                        <div class="flex p-10 text-white items-center">
-                            <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" 
-                            alt="Dust Defender Lab Logo" 
-                            class="h-16 sm:h-20 lg:h-24">
-                            <div class="flex items-end space-x-2 sm:space-x-4 ml-16 lg:ml-auto">
-                                <a href="#start" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">Home</a>
-                                <a href="#mid" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">About Us</a>
-                                <a href="#end" class="text-sm sm:text-base lg:text-lg hover:text-gray-300">Contact Us</a>
-                            </div>
-                            
-                            
-                        </div>
-
-                        <div >
-                            <h2 class="mt-10 max-sm:p-[50px]  max-sm:pt-60 max-sm:text-xl lg:text-4xl lg:mt-[300px] lg:ml-[90px] barlow text-white">
-                                FULL SERVICE AND EXCELLENT QUALITY
-                            </h2>
-                            
-                            <div class="flex lg:space-x-20 items-center h-screen w-full text-white lg:px-24 max-sm:px-10 ">
-                                <p class="text-[15vw] font-extrabold uppercase barlow  pb-[550px] max-sm:pb-[900px] max-sm:pr-[40px] ">
-                                    CAR
-                                </p>
-                                <h1 class="text-[15vw] font-extrabold uppercase barlow pb-[550px] max-sm:pb-[900px] max-sm:mr-[100px] ">
-                                    DETAILING
-                                </h1>
-                            </div>
-                               
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const video = document.getElementById("backgroundVideo");
-                
-                video.addEventListener("ended", function () {
-                    video.currentTime = 0; // Restart from beginning
-                    video.play(); // Play again
-                });
-            });
-        </script>
-
+            <div class="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center text-center" id="start">
+                <!-- Background Video -->
+                <video id="backgroundVideo" class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted playsinline preload="auto">
+                    <source src="https://detailx.ancorathemes.com/wp-content/uploads/2023/08/157_1-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        
+                <!-- Overlay to Darken Video -->
+                <div class="absolute inset-0 bg-black opacity-50"></div>
+        
+                <!-- Navbar (Now Above Overlay for Better Visibility) -->
+                <div class="absolute top-0 left-0 w-full px-6 sm:px-10 lg:px-24 text-white z-20">
+                    <div class="flex w-full justify-between items-center py-4">
+                        <img src="https://i.ibb.co/HD1tXmfL/1000024744-removebg.png" 
+                             alt="Dust Defender Lab Logo" 
+                             class="h-10 sm:h-16 lg:h-20">
+                        <div class="flex space-x-4 text-xs sm:text-sm lg:text-lg">
+                            <a href="#start" class="hover:text-gray-300">Home</a>
+                            <a href="#mid" class="hover:text-gray-300">About Us</a>
+                            <a href="#end" class="hover:text-gray-300">Contact Us</a>
                         </div>
                     </div>
-                
-                    <!-- Overlay to Darken Video (Optional) -->
-                    <div class="absolute inset-0 bg-black opacity-50"></div>
                 </div>
-
-                        <!-- Scroll Down Indicator (Right Side) -->
-            <div class="absolute lg:bottom-6 lg:right-6 flex flex-col items-center text-white max-sm:bottom-72 max-sm:right-36 max-sm:">
-        <span class="text-sm uppercase tracking-widest">Scroll Down</span>
-        <svg class="w-6 h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
-
-
+        
+                <!-- Content on top of video -->
+                <div class="relative z-10 w-full px-6 sm:px-10 lg:px-24 text-white flex flex-col items-center">
+                    <h2 class="mt-2 sm:mt-4 text-sm sm:text-2xl lg:text-4xl font-semibold">
+                        FULL SERVICE AND EXCELLENT QUALITY
+                    </h2>
+        
+                    <!-- Scrollable Text Wrapper (Only for Mobile) -->
+                    <div class="w-full overflow-x-auto whitespace-nowrap scrollbar-hide sm:overflow-visible">
+                        <div class="flex flex-col justify-center items-center mt-4">
+                            <p class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none">
+                                CAR
+                            </p>
+                            <h1 class="text-[12vw] sm:text-[10vw] lg:text-[6vw] font-extrabold uppercase leading-none">
+                                DETAILING
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Scroll Down Indicator -->
+                <div class="absolute lg:bottom-10 max-sm:bottom-80 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white">
+                    <span class="text-xs sm:text-sm uppercase tracking-widest">Scroll Down</span>
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6 mt-2 animate-bounce" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3v16m-6-6l6 6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
         </section>
+        
+       
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const video = document.getElementById("backgroundVideo");
+        video.addEventListener("ended", function () {
+            video.currentTime = 0;
+            video.play();
+        });
+    });
+</script>
+
        
      
 
